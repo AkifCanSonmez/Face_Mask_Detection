@@ -36,6 +36,9 @@ Dataset %80 train, %20 test olarak tanımlanır, sınıflar tespit edilir. Prepr
 
 ![1](https://user-images.githubusercontent.com/78687240/158424292-2d1d6d98-e19f-41f9-aab1-cc5da59bac92.png)
 
+### STEP 2
+Using Image Data Generator (https://www.analyticsvidhya.com/blog/2020/08/image-augmentation-on-the-fly-using-keras-imagedatagenerator/#:~:text=ImageDataGenerator%20class%20allows%20you%20to,value%20in%20the%20rotation_range%20argument.)
+
 ### STEP 2 
 Kullandığımız model, Evrişimli Sinir Ağları (CNN) kullanılarak Keras ile oluşturulmuştur. Bir evrişimli sinir ağı, görüntü sınıflandırma amaçları için son derece iyi performans gösteren özel bir derin sinir ağı türüdür. Bir CNN temel olarak bir girdi katmanı, bir çıktı katmanı ve birden çok katmana sahip olabilen bir gizli katmandan oluşur. Katman ve filtre üzerinde 2B matris çarpımı gerçekleştiren bir filtre kullanılarak bu katmanlar üzerinde bir evrişim işlemi gerçekleştirilir. CNN model mimarisi aşağıdaki katmanlardan oluşur:
 
