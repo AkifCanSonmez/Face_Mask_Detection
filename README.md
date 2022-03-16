@@ -48,6 +48,7 @@ Evrişimsel katman; 32 düğüm, çekirdek boyutu 4
 Tam bağlantılı katman; 128 düğüm
 
 Son katman ayrıca 1 düğümlü tam bağlantılı bir katmandır. Sigmoid kullandığımız çıktı katmanı dışındaki tüm katmanlarda bir Relu aktivasyon işlevi kullanılır.
+
 ![3](https://user-images.githubusercontent.com/78687240/158425193-24ee28b6-5f45-4f24-a229-bba52c3cdab6.png)
 
 ## PART 2:
