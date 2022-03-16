@@ -3,18 +3,19 @@
 
 ![without mask](https://user-images.githubusercontent.com/78687240/158613053-9b999210-d7bf-4a10-9c52-cada4de99b48.png)
 
-## PROJENİN AMACI
+## THE AIM OF THE PROJECT
 
 The aim of this project is to develop a system that detects whether there is a mask on the face of the person in the image coming from the camera using artificial intelligence techniques.
 
-## PROJENİN ÖZETİ
-Not: Veriseti linki source kod içerisinde.
+## SUMMARY of PROJECT
+
+## Note: The dataset link is in the source code.
 
 This project basically consists of two parts. In the first part, a dataset of approximately 3800 unmasked and 3700 masked face images from Kaggle was used to feed a deep learning model that would classify whether the person had a mask on their face. This model has been saved for use in the second part of the project. In the second part, a camera recording was started and the position of the face of the person in the image was instantly detected, and then, using this location information, it was ensured to determine whether there was a mask on the face of the person with the image taken.
 
-## Kaynak kodu: https://github.com/AkifCanSonmez/Face_Mask_Detection
+## Source Code: https://github.com/AkifCanSonmez/Face_Mask_Detection
 
-## PROJEDE KULLANILAN TEKNOLOJİLER
+## TECHNOLOGIES USED IN THE PROJECT
 
 ### Used IDE: Jupyter Notebook
 
@@ -31,7 +32,7 @@ OpenCV: OpenCV (Open Source Computer Vision) is an open source image processing 
 NumPy: A library for the Python programming language that supports large, multidimensional arrays and matrices, adding high-level mathematical functions to operate on those arrays.
 
 
-# PROJE YAPIM AŞAMALARI
+# PROJECT STAGES
 
 ## PART 1: 
 
