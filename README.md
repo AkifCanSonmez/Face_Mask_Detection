@@ -5,30 +5,30 @@
 
 ## PROJENİN AMACI
 
-Bu projenin amacı, yapay zeka teknikleri kullanılarak kameradan gelen görüntüdeki insanın yüzünde maske olup olmadığını tespit eden sistemi geliştirmektir.
+The aim of this project is to develop a system that detects whether there is a mask on the face of the person in the image coming from the camera using artificial intelligence techniques.
 
 ## PROJENİN ÖZETİ
 Not: Veriseti linki source kod içerisinde.
 
-Bu proje temel olarak iki kısımdan oluşmaktadır. İlk kısımda Kaggle'dan alınmış yaklaşık 3800 maskesiz ve 3725 maskeli yüz resmine sahip bir veri seti, kişinin yüzünde maske olup olmadığını sınıflandıracak bir derin öğrenme modelini beslemek için kullanılmıştır. Bu model projenin ikinci kısmında kullanılmak üzere kaydedilmiştir. İkinci kısımda ise bir kamera kaydı başlatılarak görüntüdeki kişinin yüzünün konumunun anlık olarak tespit edilmesi daha sonrasında bu konum bilgileri kullanılarak alınan görüntü ile kişinin yüzünde maske olup olmadığı tespit edilmesi sağlanmıştır.
+This project basically consists of two parts. In the first part, a dataset of approximately 3800 unmasked and 3700 masked face images from Kaggle was used to feed a deep learning model that would classify whether the person had a mask on their face. This model has been saved for use in the second part of the project. In the second part, a camera recording was started and the position of the face of the person in the image was instantly detected, and then, using this location information, it was ensured to determine whether there was a mask on the face of the person with the image taken.
 
 ## Kaynak kodu: https://github.com/AkifCanSonmez/Face_Mask_Detection
 
 ## PROJEDE KULLANILAN TEKNOLOJİLER
 
-### Kullanılan Programlar: Jupyter Notebook
+### Used IDE: Jupyter Notebook
 
-### Kullanılan Programlama Dilleri: Python
+### Used Programming Language: Python
 
-## Kullanılan Kütüphaneler:
+## Used Libraries:
 
-face_recognation: Yüz tanıma işlemini basitleştirmek için geliştirilmiş bir python kütüphanesi.
+Face_recognation: A python library developed to simplify facial recognition.
 
-Keras: Neredeyse her tür derin öğrenme modelini tanımlamak ve eğitmek için uygun bir yol sağlayan Python için bir derin öğrenme kütüphanesidir. Keras, Tensorflow , Theano ve CNTK üzerinde çalışabilen Python ile yazılmış bir üst düzey sinir ağları API'sıdır.
+Keras:It is a deep learning library for Python that provides a convenient way to define and train almost any type of deep learning model. Keras is a high-level neural networks API written in Python that can run on Tensorflow, Theano, and CNTK.
 
-OpenCV: OpenCV (Open Source Computer Vision) açık kaynak kodlu görüntü işleme kütüphanesidir.
+OpenCV: OpenCV (Open Source Computer Vision) is an open source image processing library.
 
-NumPy: Python programlama dili için büyük, çok boyutlu dizileri ve matrisleri destekleyen, bu diziler üzerinde çalışacak üst düzey matematiksel işlevler ekleyen bir kitaplıktır.
+NumPy: A library for the Python programming language that supports large, multidimensional arrays and matrices, adding high-level mathematical functions to operate on those arrays.
 
 
 # PROJE YAPIM AŞAMALARI
@@ -36,7 +36,7 @@ NumPy: Python programlama dili için büyük, çok boyutlu dizileri ve matrisler
 ## PART 1: 
 
 ### STEP 1 
-Dataset %80 train, %20 test olarak tanımlanır, sınıflar tespit edilir. Preprocessing işlemi gerçekleştirilir.
+Dataset is defined as 80% train, 20% test, classes are determined. Preprocessing is performed.
 
 ![1](https://user-images.githubusercontent.com/78687240/158424292-2d1d6d98-e19f-41f9-aab1-cc5da59bac92.png)
 
@@ -44,28 +44,28 @@ Dataset %80 train, %20 test olarak tanımlanır, sınıflar tespit edilir. Prepr
 Using Image Data Generator (https://www.analyticsvidhya.com/blog/2020/08/image-augmentation-on-the-fly-using-keras-imagedatagenerator/#:~:text=ImageDataGenerator%20class%20allows%20you%20to,value%20in%20the%20rotation_range%20argument.)
 
 ### STEP 2 
-Kullandığımız model, Evrişimli Sinir Ağları (CNN) kullanılarak Keras ile oluşturulmuştur. Bir evrişimli sinir ağı, görüntü sınıflandırma amaçları için son derece iyi performans gösteren özel bir derin sinir ağı türüdür. Bir CNN temel olarak bir girdi katmanı, bir çıktı katmanı ve birden çok katmana sahip olabilen bir gizli katmandan oluşur. Katman ve filtre üzerinde 2B matris çarpımı gerçekleştiren bir filtre kullanılarak bu katmanlar üzerinde bir evrişim işlemi gerçekleştirilir. CNN model mimarisi aşağıdaki katmanlardan oluşur:
+The model we used was built with Keras using Convolutional Neural Networks (CNN). A convolutional neural network is a special type of deep neural network that performs extremely well for image classification purposes. A CNN basically consists of an input layer, an output layer, and a hidden layer, which can have multiple layers. A convolution operation is performed on these layers using a filter that performs 2D matrix multiplication on the layer and filter. The CNN model architecture consists of the following layers:
 
-Evrişimsel katman; 32 düğüm, çekirdek boyutu 4
+Convolutional layer; 32 nodes, kernel size 4
 
-Evrişimsel katman; 32 düğüm, çekirdek boyutu 4
+Convolutional layer; 32 nodes, kernel size 4
 
-Evrişimsel katman; 32 düğüm, çekirdek boyutu 4
+Convolutional layer; 32 nodes, kernel size 4
 
-Tam bağlantılı katman; 128 düğüm
+Fully connected layer; 128 nodes
 
-Son katman ayrıca 1 düğümlü tam bağlantılı bir katmandır. Sigmoid kullandığımız çıktı katmanı dışındaki tüm katmanlarda bir Relu aktivasyon işlevi kullanılır.
+The last layer is also a 1-node fully connected layer. A Relu activation function is used in all layers except the output layer where we use Sigmoid.
 
 ![3](https://user-images.githubusercontent.com/78687240/158425193-24ee28b6-5f45-4f24-a229-bba52c3cdab6.png)
 
 ## PART 2:
 
 ### STEP 1
-Görüntüdeki yüzlerin konumunun belirlenebilmesi için OpenCV tarafından daha önceden hazırlanmış XML dosyası (Face Cascade) tanımlanır ve Part 1'de eğitilen model yüklenir.  
+In order to determine the position of the faces in the image, a pre-prepared XML file (Face Cascade) is defined by OpenCV and the model trained in Part 1 is loaded. 
 
 ![5](https://user-images.githubusercontent.com/78687240/158425550-3e7ceaaf-36d0-44cd-92f7-3edb03217cef.png)
 
 ### Step 2
-Kamera açılır; kameradaki kişinin yüzünün konumu cascade classifier ile belirlenir, daha iyi bir tahmin için konum bilgisiyle görüntüdeki kişinin yüzü kırpılarak resim haline getirilir. Preprocessing işleminden sonra model ile tahmin yapılır.
+The camera opens; The position of the person's face in the camera is determined by the cascade classifier, for a better estimation, the face of the person in the image is cropped into a picture with the location information. After the preprocessing process, the model is predicted.
 
 ![7](https://user-images.githubusercontent.com/78687240/158566726-509cb6a2-17eb-415a-975b-57d0eca8526f.png)
