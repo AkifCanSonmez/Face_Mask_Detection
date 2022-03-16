@@ -1,22 +1,22 @@
 # Face_Mask_Detection
 
-PROJENİN AMACI
+## PROJENİN AMACI
 
 Bu projenin amacı, yapay zeka teknikleri kullanılarak kameradan gelen görüntüdeki insanın yüzünde maske olup olmadığını tespit eden sistemi geliştirmektir.
 
-PROJENİN ÖZETİ
+## PROJENİN ÖZETİ
 
 Bu proje temel olarak iki kısımdan oluşmaktadır. İlk kısımda Kaggle'dan alınmış yaklaşık 3800 maskesiz ve 3725 maskeli yüz resmine sahip bir veri seti, kişinin yüzünde maske olup olmadığını sınıflandıracak bir derin öğrenme modelini beslemek için kullanılmıştır. Bu model projenin ikinci kısmında kullanılmak üzere kaydedilmiştir. İkinci kısımda ise bir kamera kaydı başlatılarak görüntüdeki kişinin yüzünün konumunun anlık olarak tespit edilmesi daha sonrasında bu konum bilgileri kullanılarak alınan görüntü ile kişinin yüzünde maske olup olmadığı tespit edilmesi sağlanmıştır.
 
-Kaynak kodu: 
+## Kaynak kodu: 
 
-PROJEDE KULLANILAN TEKNOLOJİLER
+## PROJEDE KULLANILAN TEKNOLOJİLER
 
-Kullanılan Programlar: Jupyter Notebook
+### Kullanılan Programlar: Jupyter Notebook
 
-Kullanılan Programlama Dilleri: Python
+### Kullanılan Programlama Dilleri: Python
 
-Kullanılan Kütüphaneler:
+## Kullanılan Kütüphaneler:
 
 face_recognation: Yüz tanıma işlemini basitleştirmek için geliştirilmiş bir python kütüphanesi.
 
