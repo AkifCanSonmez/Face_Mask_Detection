@@ -55,8 +55,10 @@ Son katman ayrıca 1 düğümlü tam bağlantılı bir katmandır. Sigmoid kulla
 
 ### STEP 1
 Görüntüdeki yüzlerin konumunun belirlenebilmesi için OpenCV tarafından daha önceden hazırlanmış XML dosyası (Face Cascade) tanımlanır ve Part 1'de eğitilen model yüklenir.  
+
 ![5](https://user-images.githubusercontent.com/78687240/158425550-3e7ceaaf-36d0-44cd-92f7-3edb03217cef.png)
 
 ### Step 2
 Kamera açılır; kameradaki kişinin yüzünün konumu cascade classifier ile belirlenir, daha iyi bir tahmin için konum bilgisiyle görüntüdeki kişinin yüzü kırpılarak resim haline getirilir. Preprocessing işleminden sonra model ile tahmin yapılır.
+
 ![7](https://user-images.githubusercontent.com/78687240/158566726-509cb6a2-17eb-415a-975b-57d0eca8526f.png)
