@@ -8,7 +8,7 @@ Bu projenin amacı, yapay zeka teknikleri kullanılarak kameradan gelen görünt
 
 Bu proje temel olarak iki kısımdan oluşmaktadır. İlk kısımda Kaggle'dan alınmış yaklaşık 3800 maskesiz ve 3725 maskeli yüz resmine sahip bir veri seti, kişinin yüzünde maske olup olmadığını sınıflandıracak bir derin öğrenme modelini beslemek için kullanılmıştır. Bu model projenin ikinci kısmında kullanılmak üzere kaydedilmiştir. İkinci kısımda ise bir kamera kaydı başlatılarak görüntüdeki kişinin yüzünün konumunun anlık olarak tespit edilmesi daha sonrasında bu konum bilgileri kullanılarak alınan görüntü ile kişinin yüzünde maske olup olmadığı tespit edilmesi sağlanmıştır.
 
-## Kaynak kodu: 
+## Kaynak kodu: https://github.com/AkifCanSonmez/Face_Mask_Detection
 
 ## PROJEDE KULLANILAN TEKNOLOJİLER
 
